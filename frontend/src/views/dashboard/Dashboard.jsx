@@ -256,7 +256,7 @@ function Dashboard() {
                                     <div className="d-sm-flex justify-content-between align-items-center">
                                         <h5 className="mb-2 mb-sm-0">
                                             All Blog Posts <span className="badge bg-primary bg-opacity-10 text-primary">{posts?.length}</span>
-                                        </h5>
+                                        </h5> 
                                         <a href="#" className="btn btn-sm btn-primary mb-0">
                                             Add New <i className="fas fa-plus"></i>
                                         </a>

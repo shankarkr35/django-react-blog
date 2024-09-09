@@ -326,7 +326,7 @@ class DashboardNotificationLists(generics.ListAPIView):
     permission_classes = [AllowAny]
 
     def get_queryset(self):
-        user_id = self.kwargs['user_id']
+        user_id = self.kwargs['user_id'] 
         # user = api_models.User.objects.get(id=user_id)
         # return api_models.Notification.objects.filter(seen=False, user=user)
 

@@ -17,7 +17,6 @@ function Posts() {
         } catch (error) {
             console.log(error);
         }
-
     }
     useEffect(()=>{
         fetchPost();

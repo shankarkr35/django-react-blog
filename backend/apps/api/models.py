@@ -150,7 +150,7 @@ class Notification(models.Model):
     NOT_TYPE = (
         ('Like','Like'),
         ('Comment','Comment'),
-        ('Comment','Bookmark'),
+        ('Bookmark','Bookmark'),
     )
     post = models.ForeignKey(Post,blank=True,on_delete=models.CASCADE)
     user = models.ForeignKey(User,blank=True,on_delete=models.CASCADE)
