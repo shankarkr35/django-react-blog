@@ -36,11 +36,11 @@ function Header() {
                                     Home
                                 </Link>
                             </li>
-                            <li className="nav-item dropdown">
+                            {/* <li className="nav-item dropdown"> 
                                 <Link className="nav-link active" to="/category/">
                                     Category
                                 </Link>
-                            </li>
+                            </li> */}
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle active" href="#" id="pagesMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Pages
@@ -89,7 +89,7 @@ function Header() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link className="dropdown-item" to="/profile/">
+                                        <Link className="dropdown-item" to="/profile/"> 
                                             <i className="fas fa-user-gear"></i> Profile
                                         </Link>
                                     </li>

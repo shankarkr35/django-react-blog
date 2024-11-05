@@ -93,7 +93,7 @@ class Post(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE,related_name='posts')
     title = models.CharField(max_length=200, blank=True, null=True)
     tags = models.CharField(max_length=100, blank=True, null=True)
-    Description = models.TextField(blank=True, null=True)
+    description = models.TextField(blank=True, null=True)
     image = models.FileField(upload_to="image", null=True, blank=True)
     views = models.IntegerField(default=0)
     likes = models.ManyToManyField(User, blank=True, related_name="likes_user")

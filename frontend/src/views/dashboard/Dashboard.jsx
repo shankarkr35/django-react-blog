@@ -257,9 +257,9 @@ function Dashboard() {
                                         <h5 className="mb-2 mb-sm-0">
                                             All Blog Posts <span className="badge bg-primary bg-opacity-10 text-primary">{posts?.length}</span>
                                         </h5> 
-                                        <a href="#" className="btn btn-sm btn-primary mb-0">
-                                            Add New <i className="fas fa-plus"></i>
-                                        </a>
+                                        <Link to="/add-post/" className="btn btn-sm btn-primary mb-0">
+                                            Add New <i className="fas fa-plus"></i> 
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className="card-body">

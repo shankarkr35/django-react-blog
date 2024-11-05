@@ -374,7 +374,7 @@ class DashboardPostCommentAPIView(APIView):
         comment.save()
 
         return Response({"message": "Comment Response Sent"}, status=status.HTTP_201_CREATED)
-    
+ 
 class DashboardPostCreateAPIView(generics.CreateAPIView):
     serializer_class = api_serializer.PostSerializer
     permission_classes = [AllowAny]
@@ -389,19 +389,12 @@ class DashboardPostCreateAPIView(generics.CreateAPIView):
         category_id = request.data.get('category')
         post_status = request.data.get('post_status')
 
-        print(user_id)
-        print(title)
-        print(image)
-        print(description)
-        print(tags)
-        print(category_id)
-        print(post_status)
-
         user = api_models.User.objects.get(id=user_id)
         category = api_models.Category.objects.get(id=category_id)
 
         post = api_models.Post.objects.create(
             user=user,
+            profile=user.profile,
             title=title,
             image=image,
             description=description,
@@ -411,7 +404,7 @@ class DashboardPostCreateAPIView(generics.CreateAPIView):
         )
 
         return Response({"message": "Post Created Successfully"}, status=status.HTTP_201_CREATED)
-
+    
 class DashboardPostEditAPIView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = api_serializer.PostSerializer
     permission_classes = [AllowAny]
